@@ -219,15 +219,14 @@ var loadTasks = function(){
   var savedTasks = localStorage.getItem("tasks");
   
   if(!savedTasks){
+    
   return false;  
 }
 console.log(tasks);
 
 savedTasks = JSON.parse(savedTasks);
-  //Gets task items from localStorage.
-  //Converts tasks from the string format back into an array of objects.
-  //Iterates through a tasks array and creates task elements on the page from it.
-  for (var i = 0; i < savedTasks.length; i++) {
+  
+for (var i = 0; i < savedTasks.length; i++) {
     // pass each task object into the `createTaskEl()` function
     
     createTaskEl(savedTasks[i]);
